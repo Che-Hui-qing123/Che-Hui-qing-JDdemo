@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="Chen">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="author" content="">
+    <title>用户登录</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="./script/jquery.js"></script>
+    
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="login">
+        <div>
+            <span>
+                <img src="http://misc.360buyimg.com/lib/img/e/logo-201305-b.png" onclick="location.href='/'" class="imgLoge" alt="">
+                <span class="denglu">欢迎登录</span>
+            </span>
+            <span>
+                <a href="/Login.html"><img src="http://misc.360buyimg.com/user/passport/1.0.0/css/i/q-icon.png" alt="">登录页面，问卷调查</a>
+            </span>
+        </div>
+    </div>
+    <div class="tips-wrapper">
+        <div>
+            依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！ 新版<span style="color:black">《京东隐私政策》</span>已上线，将更有利于保护您的个人隐私。
+        </div>
+    </div>
+    <div class="login-banner" style="background-color:#d11e20">
+        <div class="w">
+            <div id="banner-bg" clstag="pageclick|keycount|20150112ABD|46" class="i-inner" style="background: url(http://img11.360buyimg.com/da/jfs/t8443/164/1893610556/80272/68f8b3b6/59c0d218N8bedc924.jpg) 0px 0px no-repeat;background-color: #d11e20">
+                <div class="dengluF">
+                    <div class="saoma">
+                        <span class="textHe">扫码登录</span>
+                        <span>账户登录</span>
+                    </div>
+                    <div class="delu_img">
+                        <img src="http://qr.m.jd.com/show?appid=133&size=147&t=1505905632317" class="imgOne " alt="">
+                        <img src="http://misc.360buyimg.com/user/passport/1.0.0/css/i/phone-orange.png" class="imgTwe imgDis" alt="">
+                    </div>
+                    <div class="img_text">打开京东&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;扫描二维码</div>
+                    <ul class="smallIcon">
+                        <li>
+                            <i></i><em>免输入</em>
+                        </li>
+                        <li>
+                            <i></i><em>更快</em>
+                        </li>
+                        <li>
+                            <i></i><em>更安全</em>
+                        </li>
+                    </ul>
+                   <form action="/login" method="post" class='imgDis'>
+                        <div><span></span><input type="text" name='petname' placeholder="邮箱/用户名/已验证手机"></div>
+                        <div><span></span><input type="password" name="password" placeholder="密码"></div>
+                        <div class="mima">忘记密码</div>
+                        <div><input type="submit" placeholder="密码"></div>
+                   </form>
+                    <ul class="bgcoN">
+                        <li class="Qb_a">
+                            <i></i>
+                            <span>QQ</span>
+                        </li>
+                        <li class="Qb_a">
+                            <i></i>
+                            <span>微信</span>
+                        </li>
+                        <li class="zhuce">
+                            <i></i>
+                            <span onclick="location.href='/register.html'">立即注册</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <pre>
+                关于我们 | 联系我们 | 人才招聘 | 商家入驻 | 广告服务 | 手机京东 | 友情链接 | 销售联盟 | 京东社区 | 京东公益 | English Site
+            </pre>
+        </div>
+        <div class="footerone">
+            Copyright © 2004-2017  京东JD.com 版权所有
+        </div>
+    </div>
+    <script src="./script/login.js"></script>
+    <script>
+      $('form').submit(function(e){
+                e.preventDefault();
+                // 登录
+                $.post(this.action,$(this).serialize(),(data)=>{
+                    if (data.code == "success") {
+                        location.href='/';
+                    }else{
+                        alert(data.message);
+                        location.href='/register.html'
+                    }
+                })
+            })
+    </script>
+</body>
+
+</html>

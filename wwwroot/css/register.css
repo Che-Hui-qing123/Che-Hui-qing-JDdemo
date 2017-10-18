@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+}
+body,html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+body>div{
+    width: 100%;
+}
+body>div>div{
+    width: 1190px;
+    margin: 0 auto;
+}
+.register{
+    line-height: 76px;
+}
+.register span a{
+    text-decoration: none;
+    color: gray;
+}
+.register span:first-child{
+    font-size: 23px;
+}
+.register>div{
+    display: flex;
+    justify-content: space-between;
+}
+.register img{
+    width: 160px;
+    height: 76px;
+    vertical-align:middle;
+}
+.con{
+    display: flex;
+    margin-top: 50px;
+}
+.con .form-horizontal{
+    width: 700px;
+    height: 100%;
+    border-right: 1px solid lightgray;
+}
+.con .input input{
+    width: 250px !important;
+    height: 50px !important;
+    border:none;
+}
+.con form>div span{
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+}
+.con form button{
+    background-color: transparent;
+    border:none;
+    color: white;
+    font-size: 20px;
+}
+.buttonColor{
+    background-color: #ee2222;
+    
+}
+.con form>div{
+    border: 1px solid lightgray;
+    width: 400px;
+    line-height: 50px;
+    
+    margin-left: 170px;
+}
+.con form>div:nth-child(n+2){
+    margin-top: 30px;
+}
+.inputY input{
+    width: 150px !important;
+    border:none;
+}
+.con div{
+    text-align: center;
+}
+.qiye{
+    width: 510px;
+    text-align: center;
+}
+.bigDiqiu{
+    margin-top: 60px;
+    /*line-height: 50px;*/
+}
+.bigDiqiu img{
+    margin-top: -20px;
+}
+
+hr{
+    width: 150px;
+    margin-top: 30px;
+}
+.diqiu{
+    display: inline-block;
+    width: 80px;
+}
+#banner-bg{
+    width: 990px;
+    
+}
